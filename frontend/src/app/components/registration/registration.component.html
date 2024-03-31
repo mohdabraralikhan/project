@@ -1,0 +1,32 @@
+<form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" ngModel required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" ngModel required>
+  </div>
+  <div>
+    <label for="bio">Description/Bio:</label>
+    <input type="text" id="bio" name="bio" ngModel required>
+  </div>
+  <div>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" ngModel required>
+  </div>
+  <div>
+    <label for="profile">Picture:</label>
+    <input type="file" accept="image/*" id="profile" name="profile" ngModel required>
+  </div>
+
+  <button type="submit" [disabled]="!registrationForm.valid">Register</button>
+</form>
+
+
+
+ 
